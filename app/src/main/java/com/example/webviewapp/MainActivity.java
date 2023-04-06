@@ -4,18 +4,23 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
+private WebView mywebview;
 
     public void showExternalWebPage(){
-        // TODO: Add your code for showing external web page here
+        mywebview.loadUrl("https://www.google.se/");
+
     }
 
     public void showInternalWebPage(){
-        // TODO: Add your code for showing internal web page here
+
     }
 
     @Override
@@ -24,6 +29,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
+        mywebview = findViewById(R.id.mywebview);
+        WebSettings webSettings = mywebview.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+
+        mywebview.setWebViewClient(new WebViewClient());
+       // mywebview.loadUrl("https://www.google.se");
 
         /*
         * Rename your App. Tip: Values->Strings
@@ -68,11 +81,14 @@ public class MainActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_external_web) {
             Log.d("==>","Will display external web page");
+            showExternalWebPage();
+
             return true;
         }
 
         if (id == R.id.action_internal_web) {
             Log.d("==>","Will display internal web page");
+            showInternalWebPage();
             return true;
         }
 
