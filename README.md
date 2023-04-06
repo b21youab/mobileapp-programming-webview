@@ -3,7 +3,10 @@
 
 **Skriv din rapport här!**
 
-_Du kan ta bort all text som finns sedan tidigare_.
+Jag döpte om namnet till Java. Sedan använde jag <uses-permission android:name="android.permission.INTERNET" /> för att tillåta internettillgång.
+Webview element skapades och tilldelades ett id "@+id/mywebview".
+Privat variabelinstans skapades kallad mywebview. 
+JavascriptTillgång tilläts och showInternal och showExternalmetoderna byggdes på med att visa specifika URLS. Dessa metoder anropades därefter i onOptionsItemSelected();
 
 ## Följande grundsyn gäller dugga-svar:
 
@@ -33,7 +36,7 @@ function errorCallback(error) {
 
 Bilder läggs i samma mapp som markdown-filen.
 
-![](android.png)
+![](Screenshot_20230406_112716.png)
 
 Läs gärna:
 
