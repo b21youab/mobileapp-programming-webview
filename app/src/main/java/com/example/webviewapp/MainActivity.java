@@ -20,7 +20,7 @@ private WebView mywebview;
     }
 
     public void showInternalWebPage(){
-mywebview.loadUrl("file:///android_asset/internal.html");
+    mywebview.loadUrl("file:///android_asset/internal.html");
     }
 
     @Override
